@@ -1,0 +1,87 @@
+{
+  "id": "mau-mau",
+  "name": "Mau-Mau",
+  "version": "0.5.1",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "cover": "cover.svg",
+  "sdk": "^0.1.6",
+  "license": {
+    "code": "MIT",
+    "assets": "CC0-1.0"
+  },
+  "mode": "turn-based",
+  "players": {
+    "min": 2,
+    "max": 6
+  },
+  "server": true,
+  "client": "dist/client",
+  "description": {
+    "de": "Mau-Mau für 2–6 Spieler mit Siebenern, Achtern, Buben und Assen",
+    "en": "Mau-Mau for 2–6 players with sevens, eights, jacks and aces"
+  },
+  "stats": {
+    "siege": {
+      "label": {
+        "de": "Siege",
+        "en": "Wins"
+      },
+      "better": "higher"
+    }
+  },
+  "repository": "https://github.com/hearthbit/gamehearth-mau-mau",
+  "roles": {
+    "player": {
+      "inputs": [
+        "touch",
+        "mouse"
+      ],
+      "screen": "small"
+    }
+  },
+  "options": {
+    "bubeAufBube": {
+      "label": {
+        "de": "Bube auf Bube",
+        "en": "Jack on jack"
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "siebenerStapeln": {
+      "label": {
+        "de": "7er stapeln",
+        "en": "Stack 7s"
+      },
+      "type": "boolean",
+      "default": true
+    },
+    "ass": {
+      "label": {
+        "de": "Ass",
+        "en": "Ace"
+      },
+      "type": "choice",
+      "default": "nochmal",
+      "choices": [
+        {
+          "value": "nochmal",
+          "label": {
+            "de": "noch mal dran",
+            "en": "another turn"
+          }
+        },
+        {
+          "value": "aussetzen",
+          "label": {
+            "de": "Nächster setzt aus",
+            "en": "next player is skipped"
+          }
+        }
+      ]
+    }
+  }
+}
